@@ -11,6 +11,7 @@
     --foot-grey-clr: rgba(255, 255, 255, 0.6);
     --dark-clr: #000000;
     --btn-active: #188CE8;
+    --icon-color: #AFB1B8;
 
 
     /* Шрифти макету */
@@ -126,6 +127,7 @@ img {
     border-bottom: 1px solid #ECECEC;
 }
 
+
 .header-list,
 .nav-list,
 .header-list:focus {
@@ -157,25 +159,27 @@ img {
 /* Початок контактів */
 
 .header-link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     list-style: none;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color: var(--grey-txt-clr);
+    fill: var(--grey-txt-clr);
     text-decoration: none;
-
-}
-
-.header-link,
-.header-item {
     padding: 32px 0;
 }
 
 .header-link:hover,
 .header-link:focus {
     color: var(--main-clr);
+    fill: var(--main-clr);
 }
+
+
 
 /* Кінець контактів */
 
@@ -190,7 +194,7 @@ img {
     background-color: var(--dark-grey-clr);
     padding: 200px 0;
     text-align: center;
-    background-image: url(../images/hero_photo.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_photo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -279,10 +283,19 @@ img {
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--grey-txt-clr);
-
-
 }
 
+.icon-container {
+    width: 270px;
+    height: 120px;
+    background-color: var(--light-grey-clr);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 
@@ -373,9 +386,72 @@ img {
 
 }
 
+.team-link {
+    display: flex;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    cursor: pointer;
+    fill: var(--icon-color);
+
+}
+
+
+.team-link:hover,
+.icon-link:focus {
+    background-color: var(--main-clr);
+    fill: var(--light-txt-clr);
+}
+
+.icon-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+
+
 
 
 /* кінець люди в команді */
+
+
+/* ПОСТІЙНІ КЛІЄНТИ */
+
+.clients-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.clients-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    fill: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+}
+
+
+.clients-link:hover,
+.clients-link:focus {
+    fill: var(--main-clr);
+    border-color: var(--main-clr);
+    border-radius: 4px;
+}
 
 
 /* Футер початок */
@@ -399,6 +475,7 @@ img {
     text-decoration: none;
     display: inline-block;
     margin-bottom: 20px;
+    font-style: normal;
 }
 
 
@@ -450,6 +527,54 @@ img {
 .address-map:focus {
     color: var(--main-clr);
 
+}
+
+.links-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: var(--light-txt-clr);
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+
+.address {
+    margin-right: 70px;
+}
+
+.footer-container {
+    display: flex;
+}
+
+
+.links-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+
+}
+
+.subs-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: var(--light-txt-clr);
+    display: flex;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.subs-link:hover,
+.subs-link:focus {
+    background-color: var(--main-clr);
+    fill: var(--light-txt-clr);
 }
 
 /* Кінець футеру */
@@ -514,8 +639,7 @@ img {
     padding: 0;
 }
 
-.port-link,
-.port-link:focus {
+.port-link {
     text-decoration: none;
     color: inherit;
 }
@@ -533,4 +657,9 @@ img {
     line-height: calc(30 / 16);
     letter-spacing: 0.03em;
     color: var(--grey-txt-clr);
+}
+
+.port-item:hover,
+.port-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
