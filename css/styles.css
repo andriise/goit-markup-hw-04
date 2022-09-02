@@ -190,7 +190,11 @@ img {
     background-color: var(--dark-grey-clr);
     padding: 200px 0;
     text-align: center;
+    background-image: url(../images/hero_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 
 
 
